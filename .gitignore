@@ -1,2 +1,3 @@
 firebase-config/
 node_modules/
+config/firebase-service-account.json
