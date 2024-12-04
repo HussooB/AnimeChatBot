@@ -53,7 +53,6 @@ app.post('/index', async (req, res) => {
       name: req.body.name,
       email: req.body.email,
       password: hashedPassword,
-      character: req.body['anime-character'], // Store selected character
     });
 
     res.redirect('/log-in');
