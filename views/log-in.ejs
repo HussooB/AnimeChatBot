@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">Anime<span>Chat</span></h1>
+    </nav>
+    <a href="/"><button class="log-in">Sign-Up</button></a>
+  </header>
+  <main class="holder">
+    <% if (messages.error) { %>
+      <p class="error-message"><%= messages.error %></p>
+    <% } %>
+    <form action="/log-in" method="post">
+      <h1>Log In</h1>
+      <div class="input-box">
+        <input type="email" name="email" placeholder="Email" required>
+        <img src="/Anime-images/icons8-email-30.png" alt="email">
+      </div>
+      <div class="input-box">
+        <input type="password" name="password" placeholder="Password" required>
+        <img src="/Anime-images/icons8-password-48.png" alt="password">
+      </div>
+      <button type="submit" class="btn">Log-in</button>
+    </form>    
+  </main>
+</body>
+</html>

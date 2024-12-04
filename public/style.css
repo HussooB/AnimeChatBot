@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Itim&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Revolution&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  background: url("Anime-images/Naruto\ Uzumaki\,\ Conan\ Edogawa\,\ Goku\,\ Ichigo\ Kurosaki\,\ and\ Monkey\ D.\ Luffy\ in\ a\ gentle\ and\ mature\ pose.png");
+  background-repeat: no-repeat;
+  background-position: 50% 80%;
+  background-size: cover;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+header span{
+ color:rgb(20, 20, 158);
+}
+/* font-family: "Protest Revolution", sans-serif; */
+
+.logo{
+  font-family: "Protest Revolution", sans-serif; 
+  font-size: 3.5rem;
+  color:#f02424;
+  font-weight: 800;
+}
+.log-in{
+  font-family: "Protest Revolution", sans-serif; 
+  font-size: 2rem;
+  border:none;
+  padding:10px 40px;
+  border-radius: 50px;
+  color:white;
+  cursor: pointer;
+  background: linear-gradient(rgb(20, 20, 158),rgb(143, 1, 1));
+}
+.log-in:hover{
+background: linear-gradient(rgb(143, 1, 1),rgb(20, 20, 158));
+scale:1.1;
+}
+.holder{
+  align-self: center;
+  position: relative;
+  width: 420px;
+  background-color: transparent;
+  color: white;
+  border-radius: 20px;
+  padding: 40px 50px;
+  margin-top: 120px;
+  border:2px solid rgba(255,255,255,0.2);
+  backdrop-filter:blur(3px);
+  scale:1.3;
+  margin-bottom: 20px;
+}
+.holder h1{
+  font-size: 30px;
+  text-align: center;
+  font-weight: 900;
+  color:#f02424;
+}
+.holder .input-box{
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border:none;
+  border: 2px solid rosybrown;
+  border-radius: 40px;
+  padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+  color: #1e07e9;
+  font-weight: bolder;
+  /* font-size: ; */
+}
+.input-box img{
+  position:absolute;
+  right:20px;
+  margin-top: 10px;
+  
+}
+
+img{
+  height: 25px;
+}
+.holder .btn{
+  width:100%;
+  height: 45px;
+  color:#ffffff;
+  font-size: 1.2rem;
+  border:none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background-image: linear-gradient(rgb(20, 20, 158),rgb(143, 1, 1));
+
+}
+.holder .btn:hover{
+  /* background-image: linear-gradient(rgb(143, 1, 1),rgb(20, 20, 158));
+  opacity: 0.7; */
+ /* color:#e00c0c; */
+ background:rgb(12, 12, 233) ;
+}
+.input-box select {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 2px solid rosybrown;
+  border-radius: 40px;
+  padding: 10px;
+  font-size: 16px;
+  color: #291ab1d0;
+  font-weight: bolder;
+}
+
+.input-box select option {
+  background: black;
+  color: white;
+}
+
+
+
+
+
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 90vh;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 800px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+}
+
+.chat-header {
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.chat-box {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.user-message {
+  padding: 10px;
+  margin: 5px 0;
+  background: linear-gradient(rgb(20, 20, 158), rgb(143, 1, 1));
+  color: white;
+  border-radius: 10px;
+  max-width: 60%;
+  word-wrap: break-word;
+  align-self: flex-end;
+}
+
+.message-form {
+  display: flex;
+  width: 100%;
+}
+
+#message-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px 0 0 20px;
+  border: 2px solid rosybrown;
+  outline: none;
+  font-size: 1rem;
+}
+
+.send-btn {
+  padding: 10px 20px;
+  background: linear-gradient(rgb(20, 20, 158), rgb(143, 1, 1));
+  border: none;
+  border-radius: 0 20px 20px 0;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.logout-btn {
+  font-size: 1rem;
+  border: none;
+  background: linear-gradient(rgb(143, 1, 1), rgb(20, 20, 158));
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+} 
+.logout-btn:hover{
+  background: linear-gradient(rgb(20, 20, 158),rgb(143, 1, 1));
+}

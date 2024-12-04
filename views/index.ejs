@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">Anime<span>Chat</span></h1>
+    </nav>
+    <a href="/log-in"><button class="log-in">Log-in</button></a>
+  </header>
+  <main class="holder">
+    <form action="/index" method="post">
+      <h1><%= formTitle %></h1>
+      <div class="input-box">
+        <input type="text" id="name" name="name" placeholder="Username" required>
+        <img src="/Anime-images/icons8-user-30.png" alt="Username Icon">
+      </div>
+      <div class="input-box">
+        <input type="email" name="email" id="email" placeholder="Email Address" required>
+        <img src="/Anime-images/icons8-email-30.png" alt="Email Icon">
+      </div>
+      <div class="input-box">
+        <input type="password" id="password" name="password" placeholder="Password">
+        <img src="/Anime-images/icons8-password-48.png" alt="Password Icon">
+      </div>
+      <div class="input-box">
+        <select name="anime-character" required>
+          <option value="" disabled selected>Select Anime Character</option>
+          <option value="Naruto">Naruto Uzumaki</option>
+          <option value="Monkey D Luffy">Monkey D Luffy</option>
+          <option value="Goku">Goku from Dragon Ball</option>
+          <option value="Ichigo">Ichigo Kurosaki</option>
+          <option value="Conan">Conan Edogawa</option>
+        </select>
+        <img src="Anime-images/icons8-anime-50.png" alt="Anime Icon">
+      </div>
+      <button type="submit" class="btn">Sign-Up</button>
+    </form>
+  </main>
+  <script>
+    // Mapping characters to their background images
+    const characterBackgrounds = {
+        "Naruto": "Anime-images/Naruto/naruto___the_greatest_shinobi_by_artsbyzer0_dgsno7r-pre.jpg",
+        "Monkey D Luffy": "Anime-images/Monkey D Luffy/dm13_017___one_piece___luffy_by_destinctivart_dgq4ygz-pre.jpg",
+        "Goku": "Anime-images/Goku from Dragon Ball/goku_anime_2_by_bingus503_dhz3mc8-pre.jpg",
+        "Ichigo": "Anime-images/Ichigo Kurosaki/bleach___ichigo_kurosaki_wallpaper_by_knotshoxtm_desywk8-pre.jpg",
+        "Conan": "Anime-images/Conan Edogawa/detective_conan___ok_by_nessmasta_d462xp2-pre.jpg",
+    };
+
+    // Add event listener to the dropdown
+    document.querySelector('select[name="anime-character"]').addEventListener('change', function (event) {
+        const selectedCharacter = event.target.value; // Get the selected value
+        const backgroundImage = characterBackgrounds[selectedCharacter]; // Fetch corresponding image
+
+        // Update the background of the body
+        if (backgroundImage) {
+            document.body.style.backgroundImage = `url('${backgroundImage}')`;
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundPosition = "center";
+        }
+    });
+</script>
+
+
+
+  
+</body>
+</html>

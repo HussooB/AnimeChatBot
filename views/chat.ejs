@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">Anime<span>Chat</span></h1>
+    </nav>
+    <form action="/logout" method="POST">
+      <button style="scale :1.3" "submit" class="logout-btn">Log Out</button>
+    </form>
+  </header>
+  <main class="chat-container">
+    <div class="chat-header">
+      <h2>Welcome, <span id="username"><%= username %></span>!</h2>
+      <p>Chatting as <span id="character"><%= character %></span></p>
+    </div>
+    <div class="chat-box">
+      <!-- Messages here -->
+    </div>
+    <form class="message-form">
+      <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off">
+      <button type="submit" class="send-btn">Send</button>
+    </form>
+  </main>
+  <script>
+    // Placeholder for JavaScript functionality
+    const username = "User"; // Replace with actual username
+    const character = "Naruto Uzumaki"; // Replace with selected character
+    document.getElementById("username").innerText = username;
+    document.getElementById("character").innerText = character;
+
+    // Handle message sending
+    document.querySelector('.message-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const messageInput = document.getElementById("message-input");
+      const message = messageInput.value.trim();
+      if (message) {
+        const chatBox = document.querySelector('.chat-box');
+        const messageElement = document.createElement("div");
+        messageElement.classList.add("user-message");
+        messageElement.innerText = message;
+        chatBox.appendChild(messageElement);
+        messageInput.value = "";
+        chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+      }
+    });
+  </script>
+</body>
+</html>
