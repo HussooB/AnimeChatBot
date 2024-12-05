@@ -43,7 +43,7 @@
     </form>
   </main>
   <script>
-    // Mapping characters to their background images
+    
     const characterBackgrounds = {
         "Naruto": "Anime-images/Naruto/naruto___the_greatest_shinobi_by_artsbyzer0_dgsno7r-pre.jpg",
         "Monkey D Luffy": "Anime-images/Monkey D Luffy/dm13_017___one_piece___luffy_by_destinctivart_dgq4ygz-pre.jpg",
@@ -52,18 +52,18 @@
         "Conan": "Anime-images/Conan Edogawa/detective_conan___ok_by_nessmasta_d462xp2-pre.jpg",
     };
 
-    // Add event listener to the dropdown
+    
     document.querySelector('select[name="anime-character"]').addEventListener('change', function (event) {
-        const selectedCharacter = event.target.value; // Get the selected value
-        const backgroundImage = characterBackgrounds[selectedCharacter]; // Fetch corresponding image
+    const selectedCharacter = event.target.value; 
+    const backgroundImage = characterBackgrounds[selectedCharacter]; 
 
-        // Update the background of the body
-        if (backgroundImage) {
-            document.body.style.backgroundImage = `url('${backgroundImage}')`;
-            document.body.style.backgroundSize = "cover";
-            document.body.style.backgroundPosition = "center";
-        }
-    });
+    
+    if (backgroundImage) {
+        document.body.style.backgroundImage = `url('${backgroundImage}')`;
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+    }
+});
 </script>
 
 
