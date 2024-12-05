@@ -15,7 +15,7 @@ AnimeChatBot is a generative AI chatbot that provides engaging conversations wit
 - API: Gemini API.
 
 ## How to Run
-1. Clone the repository:https://github.com/HussooB/AnimeChat.git
+1. Clone the repository:https://github.com/HussooB/AnimeChatBot.git
 
 Install dependencies:
 Create a `.env` file in the root directory and add the following:GEMINI_API_KEY=your_api_key_here
